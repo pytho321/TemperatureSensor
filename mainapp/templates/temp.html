@@ -10,16 +10,33 @@
 
 </head>
 <body>
-    <h2 class="mt-3" style="color: rgb(6, 51, 109);">Please enter the Threshold Temperature: </h2><br>
+    <h2 class="mt-3" style="color: rgb(6, 51, 109);">Please enter the Temperatures: </h2><br>
     <div class="container-fluid">
-        <form method="post" action="" class="form-label mt-3" style="display:contents;">
+        <form method="post" action="" class="form-label mt-3">
             {% csrf_token %}
-            <label class="mb-3 mt-3">Hotspot:</label>
-            <input type="text" class="btn-group" name="hotspot"><br>
-            <label class="mb-3 mt-3">High:  </label>
-            <input type="text" class="btn-group" name="high"><br>
-            <button class="btn-group" type="submit">Set</button>
-        </form>
+            <div class="form-group">
+              <label for="Hotspot">Hotspot</label>
+              <input type="text" class="form-control" name="hotspot" placeholder="Enter Hotspot temp.">
+            </div>
+            <div class="form-group">
+              <label for="High">High</label>
+              <input type="text" class="form-control" name="high" placeholder="Enter High temp.">
+            </div>
+            <div class="form-group">
+              <label for="Batt">Batt</label>
+              <input type="number" class="form-control" name="batt" placeholder="Enter Batt temp.">
+            </div>
+            <div class="form-group">
+              <label for="offline">Offline</label>
+              <input type="number" class="form-control" name="offline" placeholder="Enter Offline temp.">
+            </div>
+            <div class="form-group">
+              <label for="current">Current</label>
+              <input type="number" class="form-control" name="current" placeholder="Enter Current temp.">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>             
     </div>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
