@@ -26,7 +26,10 @@ def threshold(request):
             warning=True            
         return render(request, 'test.html', {'Alert': alert,
                                          'Normal':normal,
-                                         'Warning': warning})
+                                         'Warning': warning,
+                                          'Batt': batt,
+                                         'Offline': offline,
+                                         'Current': current})
 
     return render(request, 'temp.html')
 
